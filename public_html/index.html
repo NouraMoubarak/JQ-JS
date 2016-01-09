@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <style>
+            #mydiv{
+                height: 80px;
+                width:200px;
+                background-color:burlywood;
+            }
+        </style>
+        <script src="jquery-2.1.3.js"/></script>
+    <script src="script.js">
+        </script>
+    <script>
+        $(document).ready(function(){
+            $(":text:eq(0)").val(window.prompt("Enter your model year","model year"));
+            $(":text:eq(1)").val(window.prompt("Enter your number of hourses","number of horses"));
+            $(":submit").click(function(){
+               window.alert("you choose: "+$(":text:eq(0)").val()+" as model year "+$(":text:eq(1)").val()+" FH"+" click view to see amount"); 
+            });
+            $(":submit").css("background-color", "goldenrod");
+            $("div").css("float", "right");
+            $(":disabled").css("color", "maroon");
+            $("p:has(a)").css("margin-top", "400px");
+            $("a").css("text-decoration", "none");
+            });
+    </script>    
+    </head>
+    <body onload="getSize(),getContent()" onresize="getSize()">
+        <div id="mydiv" onmouseover="this.style.backgroundColor='palegoldenrod'" 
+             onmouseout="this.style.backgroundColor='burlywood'">
+            <p>Page height:<span></span></p>
+            <p>Page width:<span></span></p>
+        </div>
+        <p>model year <input type="text" placeholder="model year" onfocus="this.style.borderColor='red'" onblur="this.style.borderColor=''"/></p>
+        <p>phorses nbr <input type="text" placeholder="number of horses" onKeyUp="changeBGcolor(this)"/></p>
+        <input type="submit"/>
+        <a href="login.html">View</a>
+        <br/>
+        <p>
+        <a href="#">Current URL</a>    
+        <input type="text" id="url" disabled/>
+        </p>
+    </body>
+</html>

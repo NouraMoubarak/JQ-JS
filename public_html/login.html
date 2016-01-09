@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <script src="jquery-2.1.3.js"></script>
+        <script src="script.js">
+        </script>
+        <script>
+            $(document).ready(function(){
+               $("tr:odd()").css("background-color","tan");
+               $("tr:even()").css("background-color","");
+               $("th").css("background-color","goldenrod");
+               $("td:first-child").css("background-color","palegoldenrod");
+               $("#p2").css("font-size","40px");
+               $(" :radio").change(function(){
+               $(" :text").val($("img").attr('src'));    
+                  });
+               $(":button").click(function(){
+               $("ol>li").css({"font-size":"30px"}); 
+               $("ol>li:first-child").css({"color":"white","background-color":"goldenrod"});
+               $("ol>li:last-child").css({"color":"white","background-color":"maroon"});
+               $("ol>li:nth-child(2)").css({"color":"white","background-color":"green"});
+               $(".classp").css("background-color" , "yellow");
+               $("ol>li").css({
+                 "text-decoration":"underline",
+                 "font-size":"italic"
+               });
+             }); 
+             $(".links:contains('Google')").css("color","green");
+             $("a[href ^='my']").css("font-size" , "italic");
+            });
+        </script>
+    </head>
+    <body onload="changeColor(),changeFontSize()">
+        <ul>
+            <li>
+            <p id="p1"> MECANIC AMOUNT</p>
+        <table id="myTable">
+             <thead>
+                <tr>
+                    <th></th>
+                    <th>Before 2002</th>
+                    <th>from 2003 to 2010</th>
+                    <th>from 2011 to 2013</th>
+                    <th>from 2014 to 2015</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>from 1 to 10</td>
+                <td>33,000</td>
+                <td>75,000</td>
+                <td>155,000</td>
+                <td>325,000</td>
+            </tr>
+            <tr>
+                <td>from 11 to 20</td>
+                <td>53,000</td>
+                <td>120,000</td>
+                <td>245,000</td>
+                <td>525,000</td>
+            </tr>
+              <tr>
+                <td>from 21 to 30</td>
+                <td>109,000</td>
+                <td>240,000</td>
+                <td>505,000</td>
+                <td>1,050,000</td>
+            </tr>
+            <tr>
+                <td>from 31 to 40</td>
+                <td>140,000</td>
+                <td>310,000</td>
+                <td>730,000</td>
+                <td>1,525,000</td>
+            </tr>
+            <tr>
+                <td>from 41 to 50</td>
+                <td>230,000</td>
+                <td>510,000</td>
+                <td>1,200,000</td>
+                <td>2,500,000</td>
+            </tr>
+            </tbody>
+        </table>
+            <button onclick="addRow()">Click here if you have greater than 50 FH</button></li>
+            <li><p id="p2" onmouseover="$(this).css('color','red')">places to payment</p>
+        <p><img src="bank.png" alt="webimage" height="200" width="300"/></p>
+        <label><input name="m" type="radio" checked onChange="$('img').attr('src','bank.png')"/>BANK</label>
+        <label><input name="m" type="radio" onChange="$('img').attr('src','omt.png')"/>OMT</label>
+        <label><input name="m" type="radio" onChange="$('img').attr('src','dmv.gif')"/>DMV</label>
+        <p><input type="text" value="bank.png"/></p></li>
+        <li> <p>List of Abbreviation</p>
+            <ol>
+         <li id="p3">DMV</li>
+         <li id="p4">FH</li>
+         <li id="p5">MVAT</li>
+            </ol>
+         <input type="button" value="Get Full Names" onclick="getAbbreviation()"/></li>
+        </ul>
+        <p>You should pay the double of your amount  every time you may be late at least one year</p>
+        <p>For more info visit <button onclick="window.open('http://www.google.com', '_target')"><a href="my.site" class="links">Google's</a> website</button></p>
+        <script>
+            document.getElementById("p2").innerHTML = "You can pay it in";
+        </script>
+    </body>
+</html>
