@@ -16,7 +16,7 @@
                $(" :radio").change(function(){
                $(" :text").val($("img").attr('src'));    
                   });
-               $(":button").click(function(){
+               $("#Abv").click(function(){
                $("ol>li").css({"font-size":"30px"}); 
                $("ol>li:first-child").css({"color":"white","background-color":"goldenrod"});
                $("ol>li:last-child").css({"color":"white","background-color":"maroon"});
@@ -29,6 +29,11 @@
              }); 
              $(".links:contains('Google')").css("color","green");
              $("a[href ^='my']").css("font-size" , "italic");
+             $("ul>li:last-child").css({"font-size":"23px"});
+             $("p[class]").css("color" , "red");
+             $("p[class]>a").css("color" , "green");
+             $("p[class]>a").css("font-size" , "20px");
+             $("p[class]>a").css("font-style" , "italic");
             });
         </script>
     </head>
@@ -97,10 +102,11 @@
          <li id="p4">FH</li>
          <li id="p5">MVAT</li>
             </ol>
-         <input type="button" value="Get Full Names" onclick="getAbbreviation()"/></li>
+         <input id="Abv" type="button" value="Get Full Names" onclick="getAbbreviation()"/></li>
         </ul>
-        <p>You should pay the double of your amount  every time you may be late at least one year</p>
+        <p class="attention">You should pay the <a href="#">double</a> of your amount  every time you may be late at least one year</p>
         <p>For more info visit <button onclick="window.open('http://www.google.com', '_target')"><a href="my.site" class="links">Google's</a> website</button></p>
+        <button onclick="mainPoints()">numbering the main points</button>
         <script>
             document.getElementById("p2").innerHTML = "You can pay it in";
         </script>

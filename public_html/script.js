@@ -65,4 +65,8 @@ function getSize(){
 function getContent(){
                 //. value li2anno badde 3abbe bi text field
                 document.getElementById("url").value = document.URL;
-            }            
+            }        
+            
+            function mainPoints(){
+                $("li:lt(3)").css("list-style-type","decimal");
+            }
